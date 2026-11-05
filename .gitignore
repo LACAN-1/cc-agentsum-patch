@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+# never commit Claude Code binaries or extracted source
+claude-*
+*.js
