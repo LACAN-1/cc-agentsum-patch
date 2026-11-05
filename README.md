@@ -6,6 +6,8 @@
 *English: an unofficial patcher that lets Claude Code sessions on third-party Anthropic-compatible
 providers (DeepSeek etc.) use the cheap "short" background-agent progress summaries. macOS only for now.*
 
+![一张图说清楚](assets/agentsum-explained.png)
+
 ## 解决什么问题
 
 Claude Code 会给后台子代理写一行进度标签（比如「Reading runAgent.ts」）。旧做法（`full`）是每写一次标签，
@@ -37,7 +39,7 @@ Claude Code 几天就发一个版本，相关代码的写法经常变（2.1.314 
 需要：macOS、系统自带的 `python3`（3.9 起）、`codesign`（装了 Xcode 命令行工具就有）。
 
 ```bash
-git clone <本仓库> && cd cc-agentsum-patch
+git clone https://github.com/LACAN-1/cc-agentsum-patch.git && cd cc-agentsum-patch
 python3 patch.py                 # 生成 ~/.local/share/cc-agentsum-patch/claude-<版本>-agentsum
 ```
 
